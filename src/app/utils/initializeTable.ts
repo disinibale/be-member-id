@@ -23,7 +23,6 @@ export default async function initializeTableData(): Promise<void> {
                         fullname: faker.person.fullName(),
                     } as UserCreationAttributes
                 }
-    
                 await userService.create(userValues, { logging: false })
             }
             logger.debug('Data initializing Success!')

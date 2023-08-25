@@ -1,5 +1,5 @@
 {
-	"name": "Award App",
+	"name": "award-app",
 	"version": "0.0.1",
 	"description": "Award App for Mentor.id",
 	"main": "main.ts",
