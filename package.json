@@ -1,7 +1,7 @@
 {
-	"name": "dating-app",
+	"name": "Award App",
 	"version": "0.0.1",
-	"description": "Dating app for Dealls Job Technical Test",
+	"description": "Award App for Mentor.id",
 	"main": "main.ts",
 	"scripts": {
 		"test": "jest --detectOpenHandles",
