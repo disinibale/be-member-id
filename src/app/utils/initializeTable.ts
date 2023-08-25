@@ -1,9 +1,7 @@
 import { faker } from "@faker-js/faker";
-import { hash } from "bcrypt";
-
-import userService from "../services/user.service";
 
 import { UserCreationAttributes } from "../../models/interfaces/user.interface";
+import userService from "../services/user.service";
 
 import logger from "../../logger";
 
@@ -18,13 +16,11 @@ export default async function initializeTableData(): Promise<void> {
                     userValues = {
                         email: 'bale@mail.com',
                         fullname: 'Bale',
-                        password: await hash('password', 10)
                     } as UserCreationAttributes
                 } else {
                     userValues = {
                         email: faker.internet.email(),
                         fullname: faker.person.fullName(),
-                        password: await hash('password', 10)
                     } as UserCreationAttributes
                 }
     
