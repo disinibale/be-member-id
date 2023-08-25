@@ -2,9 +2,9 @@ import { Request, Response, NextFunction } from "express";
 import authService from "../services/auth.service";
 
 export async function login(req: Request, res: Response, next: NextFunction): Promise<void> {
-    const { email, password } = req.body
+    const { email } = req.body
     try {
-        const auth = await authService.signIn({ email, password })
+        const auth = await authService.signIn({ email })
 
         res.status(200).json({
             message: 'User Authenticated!',

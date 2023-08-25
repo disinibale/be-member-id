@@ -14,7 +14,9 @@ export default async function createServer(): Promise<Express> {
 
     app.use(express.json())
     app.use(requestLog);
-    app.use('/api/v1/', routes);
+
+    app.use('/api/v1', routes);
+
     app.use(errorHandler);
     
     return app

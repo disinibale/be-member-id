@@ -10,7 +10,7 @@ export default class User extends Model<UserAttributes, UserCreationAttributes> 
     @AutoIncrement
     @Column(DataType.INTEGER)
     id!: number
-
+ 
     @Column(DataType.STRING)
     fullname!: string
 
