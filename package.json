@@ -11,9 +11,7 @@
 		"start": "node dist/main.js",
 		"dev": "ts-node-dev --respawn --transpile-only src/main.ts"
 	},
-	"keywords": [
-		"dating"
-	],
+	"keywords": [],
 	"author": "Muhamad Iqbal Nurzaman",
 	"license": "ISC",
 	"dependencies": {
