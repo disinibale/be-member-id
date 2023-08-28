@@ -1,4 +1,5 @@
 import express, { Express } from "express"
+import cors from 'cors'
 
 import connection from "./database/connection"
 import routes from './app/routes/main.route';
@@ -12,6 +13,7 @@ export default async function createServer(): Promise<Express> {
     
     const app: Express = express()
 
+    app.use(cors({ origin: '*' }))
     app.use(express.json())
     app.use(requestLog);
 
