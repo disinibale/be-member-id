@@ -15,15 +15,15 @@ export default abstract class BaseService<M extends Model> {
         return await this.model.bulkCreate(data, options)
     }
 
-    async findById(id: number | undefined, options?: FindOptions): Promise<M | null> {
+    async findById(id: number | undefined, options?: FindOptions<M>): Promise<M | null> {
         return await this.model.findByPk(id, options)
     }
 
-    async findOne(options?: FindOptions): Promise<M | null> {
+    async findOne(options?: FindOptions<M>): Promise<M | null> {
         return await this.model.findOne(options)
     }
 
-    async findAll(options?: FindOptions): Promise<M[]> {
+    async findAll(options?: FindOptions<M>): Promise<M[]> {
         return await this.model.findAll(options)
     }
 

@@ -15,7 +15,7 @@ export default async function initializeTableData(): Promise<void> {
         if (isUserDataExist.length < 1) {
             for (let i = 0; i < 50; i++) {
                 let userValues
-                if (i === 0) {  
+                if (i === 0) {
                     userValues = {
                         email: 'bale@mail.com',
                         fullname: 'Bale',
@@ -33,11 +33,23 @@ export default async function initializeTableData(): Promise<void> {
 
         if (isAwardsDataExist.length < 1) {
             for (let i = 0; i < 100; i++) {
-                const awardTypes = ['Voucher', 'Products', 'Giftcard']
+                const awardTypes = ['Vouchers', 'Products', 'Giftcard']
+                const pointStepValue = [
+                    10000, 20000, 30000, 40000, 50000,
+                    60000, 70000, 80000, 90000, 100000,
+                    110000, 120000, 130000, 140000, 150000,
+                    160000, 170000, 180000, 190000, 200000,
+                    210000, 220000, 230000, 240000, 250000,
+                    260000, 270000, 280000, 290000, 300000,
+                    310000, 320000, 330000, 340000, 350000,
+                    360000, 370000, 380000, 390000, 400000,
+                    410000, 420000, 430000, 440000, 450000,
+                    460000, 470000, 480000, 490000, 500000
+                ]
                 const awardValues = {
-                    award_type: awardTypes[Math.floor(Math.random() * awardTypes.length)] as 'Voucher' | 'Products' | 'Giftcard',
-                    point_needed: parseInt(faker.commerce.price({ min: 50000, max: 150000 })),
-                    name: faker.commerce.department(),
+                    award_type: awardTypes[Math.floor(Math.random() * awardTypes.length)] as 'Vouchers' | 'Products' | 'Giftcards',
+                    point_needed: pointStepValue[Math.floor(Math.random() * awardTypes.length)],
+                    name: `${faker.commerce.department()} Vouchers`,
                     image_url: faker.image.url()
                 } as AwardCreationAttributes
 
